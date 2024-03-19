@@ -16,7 +16,7 @@ def main():
     video_capturing_function("/data/raw/train/", "/data/processed/Train_frames")
     video_capturing_function("/data/raw/test/", "/data/processed/Test_frames")
 
-    #Visualize the frames and analyze the object in each frame by plotting the frames of each class per row (6 rows)
+    #Visualize(image in readme) the frames and analyze the object in each frame by plotting the frames of each class per row (6 rows)
     visualize_frames("/data/processed/Train_frames")
 
     #creating training dataset from frames saved in the directory
@@ -37,7 +37,7 @@ def main():
     model_cnlst.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['AUC'])
     history_new_cnlst=model_cnlst.fit(train_dataset_new,oh_train_labels,batch_size=8,epochs=20,
                             validation_data=(test_dataset_new,oh_test_labels))
-    AUC(history_new_cnlst)
+    AUC(history_new_cnlst) #plot AUC curve (image in readme)
 
     #create pre trained VGG16 model
     train_data_rgb = np.repeat(train_dataset_new[..., np.newaxis], 3, -1)
@@ -53,7 +53,7 @@ def main():
     true_classes = np.argmax(oh_test_labels, axis=1)
     
     VGG_report = classification_report(true_classes, VGG_predicted_classes, target_names=['boxing', 'running', 'Handclapping', 'jogging', 'Walking', 'handwaving'])
-    CF_matrix(true_classes, VGG_predicted_classes)
+    CF_matrix(true_classes, VGG_predicted_classes)#plot confusion matrix heatmap (image in readme)
 
 
 if __name__ == '__main__':
