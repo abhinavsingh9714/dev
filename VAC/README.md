@@ -1,9 +1,8 @@
-Video_Action_classification
+Video Action classification
 ==============================
-Video-Action-Classifier
-Video based Action Classification using LSTM
+Video-based Action Classification using LSTM
 
-Dataset: This dataset consists of labelled videos of 6 human actions (walking, jogging, running, boxing, hand waving and hand clapping) performed several times by 25 subjects in four different scenarios: outdoors s1, outdoors with scale variation s2, outdoors with different clothes s3 and indoors s4 as illustrated below.
+Dataset: This dataset consists of labeled videos of 6 human actions (walking, jogging, running, boxing, hand waving and hand clapping) performed several times by 25 subjects in four different scenarios: outdoors s1, outdoors with scale variation s2, outdoors with different clothes s3 and indoors s4 as illustrated below.
 
 ![alt text](image-3.png)![alt text](image-4.png)
 
