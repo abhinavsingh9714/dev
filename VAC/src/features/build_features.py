@@ -1,4 +1,4 @@
-import VAC.src.__init__
+import numpy as np
 
 def label_OHE(train_labels,test_labels):
     class_names = ['boxing', 'running', 'Handclapping', 'jogging', 'Walking', 'handwaving']

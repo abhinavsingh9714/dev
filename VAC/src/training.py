@@ -1,11 +1,11 @@
 from pathlib import Path
-import VAC.src.__init__
 from VAC.src.visualization.visualize import *
 from VAC.src.data.make_dataset import *
 from VAC.src.features.build_features import *
 from VAC.src.models.train_model import *
+from sklearn.metrics import classification_report
 
-from dotenv import find_dotenv, load_dotenv
+#from dotenv import find_dotenv, load_dotenv
 
 
 

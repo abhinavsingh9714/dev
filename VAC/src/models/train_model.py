@@ -1,5 +1,15 @@
-import VAC.src.__init__
-from keras.layers import Conv2D, BatchNormalization, MaxPool2D, GlobalMaxPool2D
+import keras
+from keras import models
+from keras import layers
+from keras import applications
+from keras import optimizers
+from keras.models import Sequential, Model
+from keras.layers import *
+from keras.applications.vgg16 import VGG16
+import tensorflow as tf
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras import layers
+from tensorflow.keras import models
 
 def build_convnet(conv_units_1,conv_units_2,conv_units_3,Dropout_rate1,lstm_units,Dropout_rate2):
     model_cnlst = models.Sequential()
@@ -31,9 +41,7 @@ def build_convnet(conv_units_1,conv_units_2,conv_units_3,Dropout_rate1,lstm_unit
     print(model_cnlst.summary())
     return model_cnlst
 
-num_classes = 6
-
-def create_model_VGG():
+def create_model_VGG(num_classes = 6):
     vgg16 = VGG16(include_top=False, weights='imagenet', input_shape=(100, 80, 3))
     vgg16.trainable = False  # Freeze VGG16 layers
 
