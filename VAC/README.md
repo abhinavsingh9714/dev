@@ -78,3 +78,5 @@ Model performance: Accuracy on Validation set: 79.167%
 <img width="469" alt="image" src="https://github.com/abhinavsingh9714/dev/assets/44581533/f9b42d20-24e3-4a9c-ad61-6632480e1404">
 
 ![alt text](image-2.png)
+
+Analysis: The model is getting confused between Running-Jogging-running and Handclapping-Handwaving.
