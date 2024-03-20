@@ -27,13 +27,13 @@ def build_convnet(conv_units_1,conv_units_2,conv_units_3,Dropout_rate1,lstm_unit
 
     # Flatten and dropout
     model_cnlst.add(layers.TimeDistributed(layers.Flatten()))
-    model_cnlst.add(layers.Dropout(0.2))
+    model_cnlst.add(layers.Dropout(Dropout_rate1))
 
     model_cnlst.add(LSTM(lstm_units,return_sequences=False,dropout=0.2)) # used 32 units <1>
 
     # Dense layers
     model_cnlst.add(layers.Dense(64, activation='relu'))
-    model_cnlst.add(layers.Dropout(Dropout_rate1))
+    model_cnlst.add(layers.Dropout(Dropout_rate2))
 
     # Output layer
     model_cnlst.add(layers.Dense(6, activation='softmax'))
